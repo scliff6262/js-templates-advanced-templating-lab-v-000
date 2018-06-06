@@ -20,6 +20,7 @@
     <script>mocha.setup('bdd');</script>
     <script src="test/index-test.js"></script>
     <script id="recipe-form-template"  type="text/x-handlebars-template">
+<<<<<<< HEAD
       <form id="recipe-form" onSubmit="{{method}}; return false;">
         Name: <input type="text" name="name" id="name" value="{{name}}"><br>
         Description: <input type="text" name="description" value="{{description}}"><br>
@@ -27,10 +28,21 @@
         {{#each ingredients}}
           <input class="ingredient" name="ingredients" value="{{this.name}}"><br>
         {{/each}}
+=======
+      <form id="recipe-form" onSubmit="createRecipe(); return false;">
+        Name: <input type="text" name="name"><br>
+        Description: <input type="text" name="description"><br>
+        Ingredient 1: <input type="text" name="ingredients"><br>
+        Ingredient 2: <input type="text" name="ingredients"><br>
+        Ingredient 3: <input type="text" name="ingredients"><br>
+        Ingredient 4: <input type="text" name="ingredients"><br>
+        Ingredient 5: <input type="text" name="ingredients"><br>
+>>>>>>> 594fcd06f93693ab2d6b35edb1b2360041e46662
         <input type="submit">
       </form>
     </script>
     <script id="recipe-template" type="text/x-handlebars-template">
+<<<<<<< HEAD
       <h3 id="name1">{{name}}</h3>
       <p><a href="#" onclick="displayEditForm()">Edit Recipe</a></p>
         {{>recipeDetailsPartial}}
@@ -40,6 +52,17 @@
       <ol>
       {{#each ingredients}}
         <li class="ingredients">{{displayIngredient this}}</li>
+=======
+      <h3>{{recipeName}}</h3>
+      <p><a href="javacript:displayEditForm()">Edit Recipe</a></p>
+        {{>recipeDetailsPartial}}
+    </script>
+    <script id="recipe-details-partial" type="text/x-handlebars-template">
+      <p>{{recipeDescription}}</p>
+      <ol>
+      {{#each ingredientsList}}
+        <li>{{name}}</li>
+>>>>>>> 594fcd06f93693ab2d6b35edb1b2360041e46662
       {{/each}}
     </ol>
     </script>
